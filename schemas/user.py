@@ -1,14 +1,11 @@
-from pydantic import BaseModel, Field
-from typing import Optional, Generic
+from pydantic import BaseModel
+from typing import Optional
 
 
 class UserSignupRequest(BaseModel):
     name: Optional[str] = None
     email: Optional[str] = None
     password: Optional[str] = None
-
-    class Config:
-        from_attributes = True
 
 
 class UserSignInRequest(BaseModel):
